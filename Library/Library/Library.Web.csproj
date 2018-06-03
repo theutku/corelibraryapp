@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LibraryData\LibraryData.csproj" />
+    <ProjectReference Include="..\LibraryServices\LibraryServices.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\Catalog\" />
+    <Folder Include="Views\Catalog\" />
+    <Folder Include="Models\CheckoutModels\" />
+    <Folder Include="Models\PatronModels\" />
+    <Folder Include="Views\Patron\" />
+    <Folder Include="Models\BranchModels\" />
+    <Folder Include="Views\Branch\" />
+    <Folder Include="wwwroot\images\branches\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\css\material_icons.cs" />
+    <Content Remove="wwwroot\css\material-icons.css" />
+    <Content Remove="wwwroot\css\material-design.css" />
+    <Content Remove="wwwroot\css\font-awesome.css" />
+    <Content Remove="wwwroot\images\bldg.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\css\material-icons.css" />
+    <None Include="wwwroot\css\material-design.css" />
+    <None Include="wwwroot\css\font-awesome.css" />
+  </ItemGroup>
+</Project>
